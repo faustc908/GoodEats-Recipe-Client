@@ -13,8 +13,6 @@ API endpoints for the back end include:
 
 Summary: GoodEats Recipe Finder allows you to search a robust database of recipes based on an ingredient. It also allows you to upload your own favorite personal recipes directly to the site so others can enjoy it. This app was designed with foodies in mind that are indecisive about their next unique meal.
 
-Technologies used:
-
 Front end:
 React.js/CSS3/HTML5/Jest
 
