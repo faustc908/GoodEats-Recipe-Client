@@ -2,8 +2,6 @@ GoodEats Recipe Finder
 
 Link to live app:
 
-API Documentation:
-
 API endpoints for the back end include:
 
     POST to '/recipe' to add a user recipe to the database
