@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./InputRecipe.css";
+import config from "../config"
 
 const InputRecipe = ({ updateRecipe }) => {
   const [description, setDescription] = useState("");
@@ -16,12 +17,10 @@ const InputRecipe = ({ updateRecipe }) => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       };
-      alert("saving");
-      await fetch("http://localhost:8000/recipe", header).then(async function (
+      await fetch(`${config.API_ENDPOINT}/recipe`, header).then(async function (
         response
       ) {
-        const data = await response.json();
-        alert(data.description);
+        await response.json();
         updateRecipe();
       });
     } catch (err) {

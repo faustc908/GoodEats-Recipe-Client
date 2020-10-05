@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component renders a Footer by default 1`] = `
+<div
+  className="footer"
+>
+  <p>
+    ©Colin Faust 2020
+  </p>
+  <p>
+     
+    Powered by
+    <a
+      className="link"
+      href="https://developer.edamam.com/"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Edamam
+    </a>
+  </p>
+</div>
+`;

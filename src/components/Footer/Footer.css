@@ -1,6 +1,8 @@
 .footer {
   text-align: center;
   padding: 5px;
+  border-top: 2px solid black;
+  margin-top: 10px;
 }
 
 .link {

@@ -7,17 +7,21 @@ import Appdesc from "../Appdesc/Appdesc";
 import AppForm from "../AppForm/AppForm";
 import RecipeForm from "../RecipeForm/RecipeForm";
 import InputRecipe from "../InputRecipe/InputRecipe";
+import config from "../config"
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faUtensils } from "@fortawesome/free-solid-svg-icons";
 require("dotenv").config();
+
+// Favicon
 
 library.add(faUtensils);
 
 // API info & State
 
+const APP_ID = process.env.REACT_APP_ID;
+const APP_KEY = process.env.REACT_APP_KEY;
+
 const App = () => {
-  const APP_ID = "7e817b93";
-  const APP_KEY = "dd1f3f5c93f40c501dd29392c73cbd2d";
 
   //  States
 
@@ -30,7 +34,7 @@ const App = () => {
 
   const removeRecipe = async (id) => {
     try {
-      fetch(`http://localhost:8000/recipe/${id}`, {
+      fetch(`${config.API_ENDPOINT}/recipe/${id}`, {
         method: "DELETE",
       });
 
@@ -43,21 +47,18 @@ const App = () => {
   //  Change states
 
   useEffect(() => {
-    alert("load recipes");
     grabRecipe();
   }, []);
 
   useEffect(() => {
-    alert("change recipes");
     grabRecipe();
   }, [recipes1]);
 
   // Fetches recipe from database and appends to DOM
 
   const grabRecipe = async () => {
-    alert("grabRecipe");
     try {
-      const response = await fetch("http://localhost:8000/recipe");
+      const response = await fetch(`${config.API_ENDPOINT}/recipe`);
       const jsonData = await response.json();
 
       setRecipe(jsonData);
@@ -76,7 +77,7 @@ const App = () => {
       .then((data) => setRecipes(data.hits));
   }, [query, setRecipes]);
 
-  // Render recipe results
+  // Render page
 
   return (
     <div className="App">

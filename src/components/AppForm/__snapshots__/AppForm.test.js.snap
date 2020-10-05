@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppForm component renders a AppForm by default 1`] = `
+<form
+  className="search-form"
+  onSubmit={[Function]}
+>
+  <input
+    className="search-bar"
+    placeholder="Banana"
+    required={true}
+    type="text"
+  />
+  <button
+    className="search-button"
+    type="submit"
+  >
+    Search
+  </button>
+</form>
+`;

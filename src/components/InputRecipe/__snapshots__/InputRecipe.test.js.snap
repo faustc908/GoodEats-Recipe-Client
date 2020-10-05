@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputRecipe component renders a InputRecipe by default 1`] = `
+<div
+  className="input"
+>
+  <h1
+    className="appDesc"
+  >
+    User Recipes
+  </h1>
+  <p>
+    Enter your own favorite recipes below!
+  </p>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      className="inputBox"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <button
+      className="inputButton"
+      onClick={[Function]}
+      type="button"
+    >
+      Add recipe
+    </button>
+  </form>
+</div>
+`;

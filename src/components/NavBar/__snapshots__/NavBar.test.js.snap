@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar component renders a NavBar by default 1`] = `
+<div
+  className="navbar"
+>
+  <p
+    className="texta"
+  >
+    <FontAwesomeIcon
+      border={false}
+      className="icon"
+      fixedWidth={false}
+      flip={null}
+      icon="utensils"
+      inverse={false}
+      listItem={false}
+      mask={null}
+      pull={null}
+      pulse={false}
+      rotation={null}
+      size={null}
+      spin={false}
+      swapOpacity={false}
+      symbol={false}
+      title=""
+      transform={null}
+    />
+    GoodEats
+  </p>
+  <p
+    className="textb"
+  >
+    Find new recipes
+  </p>
+</div>
+`;

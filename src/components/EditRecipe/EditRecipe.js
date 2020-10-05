@@ -1,24 +1,32 @@
 import React, { Fragment, useState } from "react";
 import "./EditRecipe.css";
+import config from "../config"
 
 const EditRecipe = ({ recipe }) => {
   const [description, setDescription] = useState(recipe.description);
+  const [updateStatus, setUpdateStatus] = useState();
 
   // Edit recipe method
+
+  const updateDescriptionHandler = (e) => {
+    setDescription(e.target.value);
+  };
 
   const updateDescription = async (e) => {
     e.preventDefault();
     try {
-      const body = { description };
-      alert(recipe.description);
-      fetch(
-        `http://localhost:8000/recipe/${recipe.recipe_id}/${recipe.description}`,
-        {
-          method: "PUT",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(body),
-        }
-      );
+      const body = { description: description };
+      fetch(`${config.API_ENDPOINT}/recipe/${recipe.recipe_id}/${description}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      }).then(data => {
+        console.log(data);
+        if (data.status === 200)
+          setUpdateStatus("updated");
+        else
+          setUpdateStatus("update failed");
+      });
     } catch (err) {
       console.error(err.message);
     }
@@ -37,18 +45,19 @@ const EditRecipe = ({ recipe }) => {
             className="inputBox2"
             type="text"
             value={description}
-            onChange={(e) => setDescription(e.target.value)}
+            onChange={updateDescriptionHandler}
           />
         </div>
         <div>
           <button
             className="inputButton"
             type="button"
-            onClick={(e) => updateDescription(e)}
+            onClick={updateDescription}
           >
             Edit recipe
           </button>
         </div>
+        <div>{updateStatus}</div>
       </div>
     </Fragment>
   );
