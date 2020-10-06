@@ -1,6 +1,10 @@
-GoodEats Recipe Finder
+GoodEats Recipe Finder- Client repository
 
-Link to live app:
+Link to server repository - https://github.com/faustc908/GoodEats-Recipe-Server
+
+Link to live app:  https://good-eats-recipe-client.vercel.app/
+
+[![GoodEats.png](https://i.postimg.cc/xd0mLvQJ/GoodEats.png)](https://postimg.cc/mP5hsFtB)
 
 API endpoints for the back end include:
 
