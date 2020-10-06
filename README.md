@@ -1,5 +1,7 @@
 GoodEats Recipe Finder- Client repository
 
+Summary: GoodEats Recipe Finder allows you to search a robust database of recipes based on an ingredient. It also allows you to upload your own favorite personal recipes directly to the site so others can enjoy it. This app was designed with foodies in mind that are indecisive about their next unique meal.
+
 Link to server repository - https://github.com/faustc908/GoodEats-Recipe-Server
 
 Link to live app:  https://good-eats-recipe-client.vercel.app/
@@ -12,8 +14,6 @@ API endpoints for the back end include:
     PUT to '/recipe' to update a recipe you already submitted
     GET to '/recipe' to get all of the recipes stored
     DELETE to '/recipe' to delete unwanted recipes from database
-
-Summary: GoodEats Recipe Finder allows you to search a robust database of recipes based on an ingredient. It also allows you to upload your own favorite personal recipes directly to the site so others can enjoy it. This app was designed with foodies in mind that are indecisive about their next unique meal.
 
 Front end:
 React.js/CSS3/HTML5/Jest
